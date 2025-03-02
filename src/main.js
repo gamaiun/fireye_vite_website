@@ -1,16 +1,14 @@
-// import * as AFRAME from "/node_modules/aframe/dist/aframe.min.js"; // Import A-Frame (non-module)
-import { initializeApp } from "/node_modules/firebase/app/dist/index.mjs";
+import { initializeApp } from "../node_modules/firebase/app/dist/index.mjs";
 import {
   getFirestore,
   collection,
   getDocs,
-} from "/node_modules/firebase/firestore/dist/index.mjs";
+} from "../node_modules/firebase/firestore/dist/index.mjs";
 import {
   getStorage,
   ref,
   getDownloadURL,
-} from "/node_modules/firebase/storage/dist/index.mjs";
-
+} from "../node_modules/firebase/storage/dist/index.mjs";
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAXmpwAy7bdxh4JZYx4zOLz0je459WLREk",

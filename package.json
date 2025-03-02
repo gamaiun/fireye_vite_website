@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-basic-ssl": "^1.2.0",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vite-plugin-copy": "^0.1.6"
   },
   "dependencies": {
     "aframe": "^1.5.0",
