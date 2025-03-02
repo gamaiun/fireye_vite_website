@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fireye AR Web Viewer</title>
+    <script src="/node_modules/aframe/dist/aframe.min.js"></script>
+    <!-- Non-module script -->
+    <script
+      type="module"
+      src="/node_modules/webxr-polyfill/build/webxr-polyfill.js"
+    ></script>
+    <script
+      type="module"
+      src="/node_modules/firebase/app/dist/index.mjs"
+    ></script>
+    <script
+      type="module"
+      src="/node_modules/firebase/storage/dist/index.mjs"
+    ></script>
+    <script
+      type="module"
+      src="/node_modules/firebase/firestore/dist/index.mjs"
+    ></script>
+    <script type="module" src="/src/main.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      #startButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      #startButton:hover {
+        background-color: #45a049;
+      }
+      #arScene {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Add favicon to avoid 404 -->
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <button id="startButton">Start AR Session</button>
+    <a-scene
+      id="arScene"
+      embedded
+      arjs="trackingMethod: best;"
+      renderer="antialias: true"
+    >
+      <a-entity id="arObject" position="0 1.6 0" scale="1 1 1"></a-entity>
+      <a-camera position="0 1.6 0"></a-camera>
+    </a-scene>
+  </body>
+</html>
